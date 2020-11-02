@@ -1,5 +1,7 @@
 package com.volna.main;
 
+import java.util.Objects;
+
 public class Tile {
     private Color color;
     private Index index;
@@ -23,5 +25,18 @@ public class Tile {
 
     public void setIndex(Index index) {
         this.index = index;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Tile tile = (Tile) o;
+        return color == tile.color;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(color);
     }
 }

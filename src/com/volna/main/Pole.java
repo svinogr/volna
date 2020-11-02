@@ -3,16 +3,14 @@ package com.volna.main;
 import java.util.Random;
 
 public class Pole {
-    public Tile[][] pole;
+    private Tile[][] pole;
     private int sizeX;
     private int sizeY;
-
 
     public Pole(int SIZE_X, int SIZE_Y) {
         pole = new Tile[SIZE_X][SIZE_Y];
         this.sizeX = SIZE_X;
         this.sizeY = SIZE_Y;
-        inflatePole();
     }
 
     public void addTile(Tile tile) {
@@ -64,5 +62,29 @@ public class Pole {
         }
 
         return builder.toString();
+    }
+
+    public Tile[][] getPole() {
+        return pole;
+    }
+
+    public void setPole(Tile[][] pole) {
+        this.pole = pole;
+    }
+
+    public int getSizeX() {
+        return sizeX;
+    }
+
+    public void setSizeX(int sizeX) {
+        this.sizeX = sizeX;
+    }
+
+    public int getSizeY() {
+        return sizeY;
+    }
+
+    public void setSizeY(int sizeY) {
+        this.sizeY = sizeY;
     }
 }

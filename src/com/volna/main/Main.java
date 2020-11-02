@@ -13,7 +13,7 @@ public class Main {
     private void createPole() {
         int x = 10, y = 10;
         pole = new Pole(x, y);
-        System.out.println("создано поле " + pole.pole.length);
+        System.out.println("создано поле " + pole.getPole().length);
         System.out.println(pole.toString());
 
         MatcherColor matcherColor = new MatcherColor(pole);
